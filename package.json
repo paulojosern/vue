@@ -1,0 +1,20 @@
+{
+  "name": "vue-ex1",
+  "version": "1.0.0",
+  "description": "vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ligatech <paulo.reis@ligatech.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "vue-loader": "^15.4.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
