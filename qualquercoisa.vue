@@ -8,6 +8,11 @@
                     {{item.texto}} <a href='#' v-on:click="deleta(i)">Done</a>
                 </li>
             </ul>
+
+            <div style="text-decoration: line-through;" v-if="item.done" v-for="(item, i) in tarefas" :key=i>
+                {{item.texto}}
+            </div>
+
         </div>
         
     </template>
@@ -19,16 +24,16 @@
                 var tarefas = JSON.parse(txtJson)
                 return {
                     txtNovaTarefa: '',
-                    tarefas
+                    tarefas         
                 }
             },
             methods: {
-                adiciona(){
+                adiciona() {
                     this.tarefas.push({texto: this.txtNovaTarefa, done: false})
                     localStorage['tarefas'] = JSON.stringify(this.tarefas)
                     this.tarefas = ''
                 },
-                deleta(indice){
+                deleta(indice) {
                     this.tarefas[indice].done = true
                     this.$set(this.tarefas, indice, this.tarefas[tarefas])
                     //this.tarefas.splice(indice,1)
@@ -39,5 +44,5 @@
     </script>
     
     <style>
-    
+        
     </style>
